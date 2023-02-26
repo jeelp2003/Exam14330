@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class EmailAddressString {
+
+   public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+      System.out.println("Input email address: ");
+      String x = scan.next();
+      String regularExpression = "^[a-zA-Z0-9]+(\-*?(A-Za-z0-9]+)*\.[a-zA-Z0-9]+";
+      
+      boolean final = x.matches(regularExpression);
+      if(final) {
+         System.out.println("String is an email address.");
+      } else {
+         System.out.println("String is not an email address.");
+      }
+   }
+}
