@@ -1,1 +1,17 @@
+import java.util.Scanner;
 
+public class IntegerLiteral {
+
+   public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+      System.out.println("Input string: ");
+      String x = scan.next();
+      String check = "/\\*[^*]*\\*+(?:[^/*][^*]*\\*+)*/";
+
+      boolean final = x.matches(check);
+      if(final) {
+         System.out.println("String is a multiline comment.");
+      } else {
+         System.out.println("String is not a multiline comment.");
+      }
+   }
