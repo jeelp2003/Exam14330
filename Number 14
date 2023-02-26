@@ -1,1 +1,17 @@
-hi
+import java.util.Scanner;
+
+public class problem11 {
+
+   public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+      System.out.println("Input string: ");
+      String x = scan.next();
+      String regularExpression = "^((b*ab*ab*)*&&(a*ba*ba*)*(a*ba*))(c|d)*|(cbadcbad)*";
+
+      boolean final = x.matches(regularExpression);
+      if(final) {
+         System.out.println("String matches.");
+      } else {
+         System.out.println("String does not match.");
+      }
+   }
